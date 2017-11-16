@@ -1,0 +1,92 @@
+
+#splunk{
+   padding-top: 130px;
+  h2{
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  h4{
+    text-align: center;
+    font-family: MyriadPro-Bold;
+    color: #46668d;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  p{
+    font-family: MyriadPro;
+    color: #717273;  
+    line-height: 1;
+    font-size: 17px;
+    margin-bottom: 22px;
+  }
+  .conicit-performance{
+    margin-top: 40px;
+    background-color: #ededee;
+    border-top: 1px solid transparent;
+    padding-bottom: 20px;
+    h4{
+      margin-bottom: 35px;
+    }
+    .img-wrapper{
+      outline: 7px solid #dfdfe1;
+      border: 2px solid #c4c4c6;
+      padding: 7px;
+      margin-bottom: 35px;
+
+    }
+    .outline{
+      outline: 7px solid #dfdfe1;
+      padding: 12px;
+    }
+    .main-img{
+      width: 100%;
+      border: 2px solid #6695ce;
+    }
+    .description{
+      padding-left: 0;
+      margin-top: 40px;
+      h5{
+        font-family: MyriadPro-Bold;
+        color: #717273;
+        font-size: 17px;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+
+  h5{
+    font-family: MyriadPro-Bold;
+    font-size: 17px;
+    color:#717273;
+    margin-bottom: 25px;
+  }
+  h6{
+    margin-bottom: 0;
+    font-size: 17px;
+    font-family: MyriadPro-Bold;
+    color: #717273;
+  }
+  ul{
+    font-family: MyriadPro;
+    padding-left: 0;
+    margin-left: 0;
+    line-height: 1;
+    margin-top: -20px;
+    list-style: none;
+    color: #717273;
+  }
+  a{
+    text-align: right;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+  }
+  strong{
+    font-family: MyriadPro-Bold;
+  }
+}

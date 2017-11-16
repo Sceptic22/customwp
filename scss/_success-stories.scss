@@ -1,0 +1,86 @@
+#stories-page{
+  padding-top: 130px;
+  padding-bottom: 57px;
+  background-color: #6695ce;
+  .stories-logo{
+    display: block;
+    margin: 0 auto;
+  }
+  h2{
+    //font-size: 50px;
+    text-align: center;
+    color: white;
+  }
+  h4{
+    font-family: MyriadPro-Bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .story {
+    margin-top: 65px;
+    span{
+      font-family: MyriadPro-Bold;
+      display: block;
+      color: white;
+      margin-top: -20px;
+    }
+    p {
+      font-weight: bold;
+      max-width: 450px;
+      margin: 20px auto;
+      line-height: 1.2;
+      text-align: justify;
+
+    }
+  }
+  .more{
+    padding-top: 35px;
+    max-width: 450px;
+    margin: 20px auto;
+    span{
+      font-size: 24px;
+      margin-left: -20px;
+    }
+    img{
+      margin-right: 30px;
+      vertical-align: top;
+    }
+    p{
+      font-size: 9px;
+      line-height: 1.2;
+      text-align: justify;
+    }
+    a{
+      width: 100%;
+      display: block;
+      text-align: right;
+      color: #364c66;
+      font-weight: bold;
+
+
+    }
+
+
+  }
+
+
+}
+.read_more{
+  width: 100%;
+  background-color: white;
+  text-align: right;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  a{
+    color: #6695ce;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+
+  }
+}

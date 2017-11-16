@@ -2,7 +2,6 @@
 /**
  * Template name: Homepage
  *
- * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
  * and that other 'pages' on your WordPress site may use a
  * different template.
@@ -37,7 +36,7 @@
                   $image          = get_field( "head_slider_image", $slide_id );
 
                   ?>
-                <div class="item<?php if($key == 0):?> active<?php endif;?>">
+                <div class="item <?php if($key == 0):?> active<?php endif;?>">
                     <img class="img-responsive" src="<?php echo $image?>" alt="...">
                     <div class="carousel-caption">
                         <h1><?php echo $description; ?></h1>
@@ -380,19 +379,38 @@ PROACTIVE ALERTS
         <div id="presentation-carousel" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner">
-                <div class="item active col-md-12 col-sm-12 col-xs-12">
+
+                    <?php
+                    $presentationSlides = new WP_Query(
+                      [
+                        'post_type'      => "presentation_slider",
+                        "post_status"    => "publish",
+                        "posts_per_page" => - 1,
+                      ]
+                    );
+
+                    foreach ( $presentationSlides->posts as $key => $slide ) {
+
+                      $slide_id = $slide->ID;
+                      $name           = get_field( "presentation_slider_title", $slide_id );
+                      $description   = get_field( "presentation_slider_description", $slide_id );
+                      $text          = get_field( "presentation_slider_text", $slide_id );
+                      $image          = get_field( "presentation_slider_image", $slide_id );
+
+                      ?>
+
+                <div class="item <?php if($key == 0):?> active<?php endif;?> col-md-12 col-sm-12 col-xs-12">
                     <div class="col-md-9 col-sm-9 col-xs-12 presentation-img">
-                    <img class="img-responsive" src="img/homepage/presentation/Image.png" alt="...">
+                    <img class="img-responsive" src="<?php echo $image?>" alt="...">
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12 presentation-description">
-                        <img src="img/homepage/presentation/Icon.png" alt="">
-                        <h4>CONICIT AGGREGATES AND SUMMARIZE PERFORMANCE DATA FROM DIFFERENT MONITORS</h4>
-                        <p>In this example, ConicIT receives CICS performance from different monitors, summarizes them by groups of
-                            CICSes and shows the total CPU and transaction-rates of each group. The detailed information is also available for
-  the user to see.
+                        <img src="<?php echo get_template_directory_uri() . "/"?>img/homepage/presentation/Icon.png" alt="">
+                        <h4><?php echo $description;?></h4>
+                        <p><?php echo $text;?>
                         </p>
                     </div>
                 </div>
+                      <?php }?>
                 <div class="item col-md-12 col-sm-12 col-xs-12">
                     <div class="col-md-9 col-sm-9 col-xs-12 presentation-img">
                     <img class="img-responsive" src="img/homepage/presentation/Image.png" alt="...">

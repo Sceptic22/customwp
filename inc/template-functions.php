@@ -161,3 +161,148 @@ function hp_head_slider_custom_table_content( $column_name, $post_id ) {
   }
 
 }
+
+add_action( 'init', 'presentation_slider');
+function presentation_slider() {
+
+  $labels = array(
+    'name'               => "Presentation slider",
+    'singular_name'      => "Presentation slider",
+    'menu_name'          => "Presentation slider",
+    'name_admin_bar'     => "Presentation slider",
+    'add_new'            => "Add New",
+    'add_new_item'       => "Add New Slide",
+    'new_item'           => "New Slide",
+    'edit_item'          => "Edit Slider Item",
+    'view_item'          => "View Slider Item",
+    'all_items'          => "All Slider Items",
+    'search_items'       => "Search Slider Items",
+  );
+
+  $args = array(
+    'labels'             => $labels,
+    'description'        => "Presentation slider post type",
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => array( 'slug' => 'presentation_slider' ),
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'           => array( 'title', )
+  );
+
+  register_post_type( 'presentation_slider', $args );
+
+}
+
+
+add_filter( 'manage_presentation_slider_posts_columns', 'presentation_slider_custom_table_head' );
+function presentation_slider_custom_table_head( $defaults ) {
+  $defaults['presentation_slider_title']         = 'Title';
+  $defaults['presentation_slider_description']          = 'Description';
+  $defaults['presentation_slider_text']               = 'Text';
+  $defaults['presentation_slider_image']         = 'Image';
+
+  unset( $defaults["date"] );
+  unset( $defaults["title"] );
+
+  return $defaults;
+}
+
+add_action( 'manage_presentation_slider_posts_custom_column', 'presentation_slider_custom_table_content', 10, 2 );
+function presentation_slider_custom_table_content( $column_name, $post_id ) {
+
+  if ( $column_name == 'presentation_slider_title' ) {
+    $field = get_post_meta( $post_id, "presentation_slider_title", true );
+    echo $field;
+  } else if ( $column_name == 'presentation_slider_description' ) {
+    $field = get_post_meta( $post_id, "presentation_slider_description", true );
+    echo $field;
+  } else if ( $column_name == 'presentation_slider_image' ) {
+    $field = get_post_meta($post_id, "presentation_slider_image", TRUE);
+    $field = intval($field);
+  } else if ( $column_name == 'presentation_slider_text' ) {
+      $field = get_post_meta( $post_id, "presentation_slider_text", true );
+      echo $field;
+    }
+    if ( $field > 0 ) {
+      $field = wp_get_attachment_image_src( $field, 'thumbnail' );
+      if ( is_array( $field ) && count( $field ) > 0 ) {
+        $field = $field[0];
+        echo "<img style='width:50px;height: 50px;' src='{$field}'/>";
+      }
+    }
+  }
+
+add_action( 'init', 'success_story');
+function success_story() {
+
+  $labels = array(
+    'name'               => "Success stories",
+    'singular_name'      => "Success stories",
+    'menu_name'          => "Success stories",
+    'name_admin_bar'     => "Success stories",
+    'add_new'            => "Add New",
+    'add_new_item'       => "Add New Story",
+    'new_item'           => "New Story",
+    'edit_item'          => "Edit Story",
+    'view_item'          => "View Story",
+    'all_items'          => "All Stories",
+    'search_items'       => "Search Stories",
+  );
+
+  $args = array(
+    'labels'             => $labels,
+    'description'        => "Success stories post type",
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => array( 'slug' => 'success_story' ),
+    'capability_type'    => 'post',
+    'has_archive'        => true,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'           => array( 'title')
+  );
+
+  register_post_type( 'success_story', $args );
+
+}
+
+
+add_filter( 'manage_success_story_posts_columns', 'success_story_custom_table_head' );
+function success_story_custom_table_head( $defaults ) {
+  $defaults['success_story_text']               = 'Text';
+  $defaults['success_story_image']         = 'Image';
+
+  unset( $defaults["date"] );
+  unset( $defaults["title"] );
+
+  return $defaults;
+}
+
+add_action( 'manage_success_story_posts_custom_column', 'success_story_custom_table_content', 10, 2 );
+function success_story_custom_table_content( $column_name, $post_id ) {
+
+  if ( $column_name == 'success_story_title' ) {
+  }  else if ( $column_name == 'success_story_image' ) {
+    $field = get_post_meta($post_id, "success_story_image", TRUE);
+    $field = intval($field);
+  } else if ( $column_name == 'success_story_text' ) {
+    $field = get_post_meta( $post_id, "success_story_text", true );
+    echo $field;
+  }
+  if ( $field > 0 ) {
+    $field = wp_get_attachment_image_src( $field, 'thumbnail' );
+    if ( is_array( $field ) && count( $field ) > 0 ) {
+      $field = $field[0];
+      echo "<img style='width:50px;height: 50px;' src='{$field}'/>";
+    }
+  }
+}

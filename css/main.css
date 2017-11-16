@@ -8225,7 +8225,8 @@ header {
   z-index: 12;
   width: 100%;
   height: 61px;
-  background-color: white; }
+  background-color: white;
+  box-shadow: 0 0 2px black; }
   header .navbar-default {
     position: static;
     background-color: transparent;
@@ -8288,7 +8289,7 @@ strong {
   font-family: MyriadPro-Semibold; }
 
 #slider-section {
-  margin-top: 62px;
+  margin-top: 60px;
   width: 100%;
   background-color: black; }
   #slider-section pre {
@@ -8623,7 +8624,6 @@ h2 {
   color: #666668; }
 
 footer {
-  margin-top: 42px;
   padding-top: 42px;
   padding-bottom: 57px;
   background-color: #6695ce; }
@@ -8648,6 +8648,7 @@ footer {
         margin-top: 32px;
         margin-left: 0; }
         footer .footer-menu li ul li {
+          display: block;
           font-family: MyriadPro;
           font-size: 17px;
           line-height: 1;
@@ -8686,6 +8687,269 @@ footer {
 
 .container {
   max-width: 965px; }
+
+#stories-page {
+  padding-top: 130px;
+  padding-bottom: 57px;
+  background-color: #6695ce; }
+  #stories-page .stories-logo {
+    display: block;
+    margin: 0 auto; }
+  #stories-page h2 {
+    text-align: center;
+    color: white; }
+  #stories-page h4 {
+    font-family: MyriadPro-Bold;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase; }
+  #stories-page .story {
+    margin-top: 65px; }
+    #stories-page .story span {
+      font-family: MyriadPro-Bold;
+      display: block;
+      color: white;
+      margin-top: -20px; }
+    #stories-page .story p {
+      font-weight: bold;
+      max-width: 450px;
+      margin: 20px auto;
+      line-height: 1.2;
+      text-align: justify; }
+  #stories-page .more {
+    padding-top: 35px;
+    max-width: 450px;
+    margin: 20px auto; }
+    #stories-page .more span {
+      font-size: 24px;
+      margin-left: -20px; }
+    #stories-page .more img {
+      margin-right: 30px;
+      vertical-align: top; }
+    #stories-page .more p {
+      font-size: 9px;
+      line-height: 1.2;
+      text-align: justify; }
+    #stories-page .more a {
+      width: 100%;
+      display: block;
+      text-align: right;
+      color: #364c66;
+      font-weight: bold; }
+
+.read_more {
+  width: 100%;
+  background-color: white;
+  text-align: right;
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .read_more a {
+    color: #6695ce;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none; }
+
+#mainframe {
+  padding-top: 130px; }
+  #mainframe h2 {
+    font-size: 62px; }
+  #mainframe h4 {
+    font-size: 25px;
+    font-family: MyriadPro-Bold;
+    color: #717273;
+    text-align: center;
+    margin-bottom: 26px;
+    margin-top: 62px; }
+  #mainframe p {
+    font-family: MyriadPro;
+    color: #717273;
+    line-height: 1;
+    font-size: 17px;
+    margin-bottom: 22px; }
+  #mainframe ul {
+    font-family: MyriadPro;
+    color: #717273;
+    line-height: 1;
+    font-size: 17px;
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+    margin-top: -20px; }
+  #mainframe h5 {
+    font-family: MyriadPro-Bold;
+    font-size: 17px;
+    color: #717273;
+    margin-bottom: 0; }
+
+#splunk {
+  padding-top: 130px; }
+  #splunk h2 {
+    font-size: 45px;
+    margin-bottom: 20px; }
+  #splunk h4 {
+    text-align: center;
+    font-family: MyriadPro-Bold;
+    color: #46668d;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  #splunk p {
+    font-family: MyriadPro;
+    color: #717273;
+    line-height: 1;
+    font-size: 17px;
+    margin-bottom: 22px; }
+  #splunk .conicit-performance {
+    margin-top: 40px;
+    background-color: #ededee;
+    border-top: 1px solid transparent;
+    padding-bottom: 20px; }
+    #splunk .conicit-performance h4 {
+      margin-bottom: 35px; }
+    #splunk .conicit-performance .img-wrapper {
+      outline: 7px solid #dfdfe1;
+      border: 2px solid #c4c4c6;
+      padding: 7px;
+      margin-bottom: 35px; }
+    #splunk .conicit-performance .outline {
+      outline: 7px solid #dfdfe1;
+      padding: 12px; }
+    #splunk .conicit-performance .main-img {
+      width: 100%;
+      border: 2px solid #6695ce; }
+    #splunk .conicit-performance .description {
+      padding-left: 0;
+      margin-top: 40px; }
+      #splunk .conicit-performance .description h5 {
+        font-family: MyriadPro-Bold;
+        color: #717273;
+        font-size: 17px;
+        text-transform: uppercase; }
+  #splunk h5 {
+    font-family: MyriadPro-Bold;
+    font-size: 17px;
+    color: #717273;
+    margin-bottom: 25px; }
+  #splunk h6 {
+    margin-bottom: 0;
+    font-size: 17px;
+    font-family: MyriadPro-Bold;
+    color: #717273; }
+  #splunk ul {
+    font-family: MyriadPro;
+    padding-left: 0;
+    margin-left: 0;
+    line-height: 1;
+    margin-top: -20px;
+    list-style: none;
+    color: #717273; }
+  #splunk a {
+    text-align: right;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 25px; }
+  #splunk strong {
+    font-family: MyriadPro-Bold; }
+
+#strobe {
+  padding-top: 130px; }
+  #strobe h3 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #717273;
+    font-size: 25px;
+    font-family: MyriadPro-Bold;
+    margin-top: 53px; }
+  #strobe h4 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: MyriadPro-Bold;
+    text-align: left;
+    color: #717273;
+    margin-top: 23px;
+    margin-bottom: 0; }
+  #strobe img {
+    margin-right: 67px;
+    margin-bottom: 60px;
+    margin-top: 10px; }
+  #strobe a {
+    display: block;
+    color: #717273;
+    text-decoration: underline;
+    margin-bottom: 25px; }
+  #strobe p {
+    margin: 0;
+    font-size: 17px;
+    color: #717273;
+    font-family: MyriadPro; }
+  #strobe ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 30px; }
+  #strobe .building-blocks-list h5 {
+    font-size: 17px;
+    color: #717273;
+    font-family: MyriadPro-Bold; }
+  #strobe .building-blocks-list ul li {
+    font-family: MyriadPro;
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: #717273; }
+  #strobe .conicit-ui {
+    padding-top: 26px;
+    background-color: #ededee; }
+    #strobe .conicit-ui h3 {
+      margin-top: 0;
+      color: #46668d;
+      margin-bottom: 34px;
+      text-align: left;
+      font-size: 25px; }
+    #strobe .conicit-ui .img-wrapper {
+      outline: 7px solid #dfdfe1;
+      border: 2px solid #c4c4c6;
+      padding: 7px;
+      margin-bottom: 35px; }
+    #strobe .conicit-ui .outline {
+      outline: 7px solid #dfdfe1;
+      padding: 12px; }
+    #strobe .conicit-ui .main-img {
+      width: 100%;
+      border: 2px solid #6695ce;
+      margin: 0; }
+    #strobe .conicit-ui .main-img2 {
+      padding: 10px;
+      width: 100%;
+      border: 2px solid #6695ce;
+      margin: 0; }
+    #strobe .conicit-ui .description {
+      padding-left: 0;
+      margin-top: 40px; }
+      #strobe .conicit-ui .description h5 {
+        font-family: MyriadPro-Bold;
+        color: #717273;
+        font-size: 17px;
+        text-transform: uppercase; }
+    #strobe .conicit-ui ul {
+      font-family: MyriadPro; }
+      #strobe .conicit-ui ul li {
+        margin-bottom: 16px;
+        color: #717273; }
+  #strobe .read-more {
+    text-align: right;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    color: #6695ce; }
 
 @media only screen and (max-width: 1280px) {
   header .navbar-nav .open .dropdown-menu {
